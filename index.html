@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('/image/BackGroundWorld.png');
+            background-repeat: no-repeat;
+        }
+        .title{
+            margin-top: 80px;
+            font-family: Raleway;
+            font-size: 40px;
+            text-align: center;
+        }
+        .noteTitle{
+            width: 30px;
+            height: 5px;
+            border-radius: 12px;
+            margin: 10px auto 0;
+        }
+        .item{
+            text-align: center;
+            width: 434px;
+            height: 125px;
+        }
+        @media screen and (min-width: 1462px){
+            .iconChat, .iconCountrys, .iconNetwork{
+                grid-row: 1 / 2;
+            }
+            .iconQA, .logo, .iconReaMoney{
+                grid-row: 2 / 3;
+            }
+            .iconChat, .iconQA{
+                grid-column: 1 / 2;
+            }
+            .iconCountrys, .logo{
+                grid-column: 2 / 3;
+            }
+            .iconNetwork, .iconReaMoney{
+                grid-column: 3 / 4;
+            }
+            .iconQA, .iconReaMoney{
+                margin-top: 100px;
+            }
+            .logo {
+                height: 300px;
+                margin-top: 28px;
+            }
+            .items{
+                display: grid;
+                grid-column-gap: 80px;
+                grid-template-columns: repeat(3, 434px);
+                max-width: 1462px;
+                margin: 68px auto 0;
+            }
+        } 
+        @media screen and (max-width: 1462px){
+            
+            @media screen and (min-width: 950px), screen and (max-width: 428px){
+                .iconChat, .iconNetwork{
+                    grid-column: 1/2;
+                }
+                .iconChat, .iconCountrys{
+                    grid-row: 1/2;
+                }
+                .iconNetwork, .iconQA{
+                    grid-row: 2 / 3;
+                }
+                .iconQA, .iconCountrys{
+                    grid-column: 2 / 3;
+                }
+                .iconReaMoney{
+                    grid-column: 1 / 3;
+                    grid-row: 3 / 4;
+                    margin: auto;
+                }
+                .logo{
+                    grid-column: 1 / 3;
+                    grid-row: 4 / 5;
+                    margin: auto;
+                }
+                @media screen and (min-width: 950px){
+                    .items{
+                        display: grid;
+                        gap: 80px;
+                        grid-template-columns: repeat(2, 434px);
+                        max-width: 948px;
+                        margin: 68px auto 0;
+                    }
+                }
+                @media screen and (max-width: 428px){
+                    .title{
+                        margin-top: 40px;
+                        font-family: Raleway;
+                        font-size: 25px;
+                        text-align: center;
+                    }
+                    .item{
+                        text-align: center;
+                        width: 190px;
+                        height: 163px;
+                    }
+                    .noteTitle{
+                        margin-top: 5px;
+                    }
+                    .logo img{
+                        max-width: 288px;
+                        max-height: 200px;
+                        margin: 0 auto 0;
+                    }
+                    .items{
+                        display: grid;
+                        grid-column-gap: 16px;
+                        grid-template-columns: repeat(2, 190px);
+                        width: 396px;
+                        margin: 40px auto 0;
+                    }
+                }
+            }   
+        }
+        @media screen and (min-width : 434px) and (max-width : 950px){
+            .items{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 1225px;
+                max-width: 434px;
+                margin: 68px auto 0;
+            }
+        }  
+    </style>
+</head>
+<body>
+    <div class="title">Thế Mạnh Của Chúng Tôi</div>
+    <div class="noteTitle"><img src="/image/NoteTitle.png" alt="NoteTitle"></div>
+    <div class="items">
+        <div class="item iconChat">
+            <img src="/image/IconChat.png" alt="IconChat">
+            <p>Luôn phản hồi kịp thời các thắc mắc của khách hàng</p>
+        </div>
+        <div class="item iconCountrys">
+            <img src="/image/IconCountrys.png" alt="IconCountrys">
+            <p>Cung cấp dịch vụ đa dạng cho khách hàng quốc tế</p>
+        </div>
+        <div class="item iconNetwork">
+            <img src="/image/IconNetwork.png" alt="IconNetwork">
+            <p>Mạng lưới hiệu quả và chặt chẽ tại Châu Á</p>
+        </div>
+        <div class="item iconQA">
+            <img src="/image/IconQA.png" alt="IconQA">
+            <p>Sử dụng đa ngôn ngữ</p>
+        </div>
+        <div class="item iconReaMoney">
+            <img src="/image/IconReaMoney.png" alt="IConReaMoney">
+            <p>Mức phí phù hợp</p>
+        </div>
+        <div class="logo">
+            <img src="/image/Logo.png" alt="Logo">
+        </div>
+    </div>
+</body>
+</html>
