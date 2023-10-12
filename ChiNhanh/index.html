@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function(){
+            $('table tr td').click(function(){
+                $(this).css('background-color','#DBBBBF');    
+            })
+            $('table tr td').mouseout(function () {
+                $(this).css('background-color','#FFFFFF');    
+            });
+
+            $('table tr td').mouseover(function () {
+                $(this).css('background-color','#DBE9FF');    
+            });       
+        });
+    </script>
+    <style>
+        body{
+            width: 100%;
+            margin: 0 auto;
+            background: url('image/Background.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .title, .address{
+            position:absolute;
+        }
+/* Css title */
+        p{
+            color: white;
+            font-family: Arimo;
+            line-height: 10px;
+        }
+        .title{
+            width: 503px;
+            text-align: center;
+            margin-top: 80px;
+            margin-left: 670px;
+        }
+        .top_title{
+            font-size: 16px;
+        }
+        .bot_title{
+            font-size: 38px;
+        }
+/* Css adress */
+        .address{
+            width: 1015px;
+            height: 460px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 240px 0 0 250px;
+        }
+        .left_address{
+            width: 325px;
+            height: 435px;
+            background-color: #204669;
+            border-radius: 10px;
+            padding-top: 25px;
+            padding-left: -8px;
+        }
+        table, tr, td{
+            /* border-collapse: collapse; */
+            width: 333px;
+        }
+        
+        td{
+            height: 55px;
+            background-color: white;
+            border-top:1px solid #D9D9D9;
+            padding-left: 15px;
+        }
+        
+/* Css Map */
+        .map{
+            position: absolute;
+            width: 100%;
+        }
+        .map img{
+            width:100%;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- <table>
+        <tr><td onmousemove="showAddress()" id="one">Trung Du Và Miền Núi Bắc Bộ</td></tr>
+        <tr><td id="two">Đồng Bằng Bắc Bộ</td></tr>
+        <tr><td id="three">Bắc Trung Bộ</td></tr>
+        <tr><td id="four">Duyên Hải Nam Trung Bộ</td></tr>
+        <tr><td id="five">Tây Nguyên</td></tr>
+        <tr><td id="six">Trung Du Và Miền Núi Bắc Bộ</td></tr>
+        <tr><td id="seven">Đồng Bằng Sông Cửu Long</td></tr>
+    </table> -->
+    <div>
+        <div class="title">
+            <p class="top_title">NỔI TIẾNG & TIN CẬY</p>
+            <p class="bot_title"><strong>Địa Chỉ Của Các Văn Phòng</strong></p>
+        </div>
+        <div class="address">
+            <div class="left_address">
+                <table>
+                        <tr><td id="one">Trung Du Và Miền Núi Bắc Bộ</td></tr>
+                        <tr><td id="two">Đồng Bằng Bắc Bộ</td></tr>
+                        <tr><td id="three">Bắc Trung Bộ</td></tr>
+                        <tr><td id="four">Duyên Hải Nam Trung Bộ</td></tr>
+                        <tr><td id="five">Tây Nguyên</td></tr>
+                        <tr><td id="six">Trung Du Và Miền Núi Bắc Bộ</td></tr>
+                        <tr><td id="seven">Đồng Bằng Sông Cửu Long</td></tr>
+                </table>
+                <script>
+                    $(function(){
+                        $('table tr td').click(function(){
+                            $(this).css('background-color','#DBBBBF');    
+                        })
+                        $('table tr td').mouseout(function () {
+                            $(this).css('background-color','#FFFFFF');    
+                        });
+            
+                        $('table tr td').mouseover(function () {
+                            $(this).css('background-color','#DBE9FF');    
+                        });       
+                    });
+                </script>
+                <!-- <div class="list_address">
+                    <hr>
+                    <div class="adr">Trung Du Và Miền Núi Bắc Bộ</div>
+                    <hr>
+                    <div class="adr">Trung Du Và Miền Núi Bắc Bộ</div>
+                    <hr>
+                    <div>Trung Du Và Miền Núi Bắc Bộ</div>
+                    <hr>
+                    <div>Trung Du Và Miền Núi Bắc Bộ</div>
+                    <hr>
+                    <div>Trung Du Và Miền Núi Bắc Bộ</div>
+                    <hr>
+                    <div>Trung Du Và Miền Núi Bắc Bộ</div>
+                    <hr>
+                    <div>Trung Du Và Miền Núi Bắc Bộ</div>
+                    <hr>
+                </div> -->
+            </div>
+            
+        </div>
+        <div class="map">
+            <img src="image/Map.png" alt="map">
+        </div>
+    </div>
+    <script>
+        function showAddress(src, apk){
+            if (!src.contains(event.fromElement)) { 
+                src.bgColor = apk; 
+            } 
+        }
+    </script>
+</body>
+</html>
