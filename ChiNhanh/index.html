@@ -9,6 +9,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Document</title>
+    <script>
+        var h = screen.height;
+    </script>
     <style>
         body{
             width: 100%;
@@ -19,12 +22,12 @@
             -o-background-size: cover;
             background-size: cover;
         }
-        .title, .address, .iconMap{
+        .title, .address, .icon-map{
             position:absolute;
             z-index: 2;
         }
 /* Css title */
-        .topTitle, .botTitle{
+        .top-title, .bot-title{
             color: white;
             font-family: Arimo;
             line-height: 10px;
@@ -32,58 +35,67 @@
         .title{
             width: 503px;
             text-align: center;
-            margin-top: 70px;
-            margin-left: 670px;
+            margin-top: 3.65%;
+            /* 70 */
+            margin-left: 34.9%;
         }
-        .topTitle{
+        .top-title{
             font-size: 16px;
         }
-        .botTitle{
+        .bot-title{
             font-size: 38px;
         }
 /* Css adress */
         .address{
             display: flex;
             flex-direction: row;
-            width: 1015px;
-            height: 460px;
+            width: 52.8%;
+            /* 1015 */
+            height: 50%;
+            /* 460 */
             background-color: white;
             border-radius: 10px;
-            margin: 230px 0 0 200px;
+            margin: 12% 0 0 13%;
+            /* 230 200 */
         }
-        .leftAddress{
-            width: 325px;
-            height: 435px;
+        .left-address{
+            display: flex;
+            width: 32%;
+            height: 100%;
+            /* 435 */
             background-color: #204669;
             border-radius: 10px;
-            padding-top: 25px;
-            padding-left: -8px;
+        }
+        table{
+            margin-top: auto;
+            margin-bottom: auto;
+            height: 91.3%;
         }
         table, tr, td{
             border-collapse: collapse;
-            width: 325px;
+            width: 100%;
         }
         
         td{
-            height: 55px;
+            font-family: Arimo;
             background-color: white;
             border-top:1px solid #D9D9D9;
             padding-left: 15px;
         }
-        .rightAddress{
+        .right-address{
             display: flex;
             flex-direction: row;
-            max-width: 642px;
-            height: 60px;
-            margin: 25px 0 0 8px;
+            width: 68%;
+            /* height: 60px; */
+            margin: 2% 0 0 0.5%;
         }
-        .addr, .addrDesp{
-            width: 560px;
+        .addr, .addr-desp{
+            width: 95%;
             font-size: 16px;
             font-family: Arimo;
             margin-left: 10px;
         }
-        .addrDesp{
+        .addr-desp{
             margin-top: 7px;
         }
 /* Css Map */
@@ -92,11 +104,11 @@
             width: 100%;
             z-index: 1;
         }
-        .map .mapVietNam{
+        .map .map-vietnam{
             width:100%;
             height: auto;
         }
-        .iconMap{
+        .icon-map{
             display: none;
         }
         @media  screen and (max-width: 1500px) {
@@ -116,16 +128,42 @@
             }
 
         }
+        @media screen and (min-width: 320px) and (max-width: 428px){
+            .title{
+                width: 90%;
+            }
+            .top-title{
+                font-size: 15px;
+            }
+            .bot-title{
+                font-size: 25px;
+            }
+            .address{
+                display: flex;
+                width: 95%;
+                height: 60%;
+                flex-direction: column;
+                margin: 230px auto 0;
+            }
+            .left-address{
+                width: 100%;
+                border-bottom-left-radius: 0%;
+                border-bottom-right-radius: 0%;
+            }
+            .right-address{
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="screenAll">
         <div class="title">
-            <p class="topTitle">NỔI TIẾNG & TIN CẬY</p>
-            <p class="botTitle"><strong>Địa Chỉ Của Các Văn Phòng</strong></p>
+            <p class="top-title">NỔI TIẾNG & TIN CẬY</p>
+            <p class="bot-title"><strong>Địa Chỉ Của Các Văn Phòng</strong></p>
         </div>
         <div class="address">
-            <div class="leftAddress">
+            <div class="left-address">
                 <table>
                         <tr><td id="one" onclick="showAddress(this,'one')">Trung Du Và Miền Núi Bắc Bộ</td></tr>
                         <tr><td id="two" onclick="showAddress(this,'two')">Đồng Bằng Bắc Bộ</td></tr>
@@ -136,21 +174,20 @@
                         <tr><td id="seven" onclick="showAddress(this,'seven')">Đồng Bằng Sông Cửu Long</td></tr>
                 </table>
             </div>
-            <div class="rightAddress">
+            <div class="right-address">
                 <div><img src="image/IconAddress.png" alt="iconAddress"></div>
                 <div>
                     <div class="addr"><strong>Địa Chỉ</strong></div>
-                    <div class="addrDesp" id="desp"></div>
+                    <div class="addr-desp" id="desp"></div>
                 </div>
             </div>
             
             </div>
         </div>
         <div class="map">
-            <img src="image/Map.png" alt="map" class="mapVietNam">
-            <img src="image/IconAddr.png" alt="iconAddr" class="iconMap" id="iconMapId">
-        </div>
-        
+            <img src="image/Map.png" alt="map" class="map-vietnam">
+            <img src="image/IconAddr.png" alt="iconAddr" class="icon-map" id="iconMapId">
+        </div>    
     </div>
     <script>
         function showAddress(element, st){      
@@ -164,13 +201,13 @@
                 "seven" : "Tầng 9, phòng 307, toà nhà GP Invest, 170 đường La Thành, Đống Đa, Hà Nội.",
             };
             var dictAddr = {
-                "one" : "132px 0 0 1280px",
-                "two" : "142px 0 0 1365px",
-                "three" : "230px 0 0 1325px",
-                "four" : "430px 0 0 1465px",
-                "five" : "430px 0 0 1435px",
-                "six" : "132px 0 0 1305px",
-                "seven" : "580px 0 0 1355px",
+                "one" : "16.4% 0 0 68.75%",
+                "two" : "17.64% 0 0 72.9%",
+                "three" : "28.57% 0 0 70.8%",
+                "four" : "53.4% 0 0 79%",
+                "five" : "53.4% 0 0 77%",
+                "six" : "16.4% 0 0 68.75%",
+                "seven" : "74.53% 0 0 72.9%",
             };
             for(var item in dictAddress){
                 if(st === item){
