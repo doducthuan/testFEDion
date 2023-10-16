@@ -18,7 +18,7 @@
             font-size: 40px;
             text-align: center;
         }
-        .noteTitle{
+        .note-title{
             width: 30px;
             height: 5px;
             border-radius: 12px;
@@ -35,22 +35,22 @@
             margin: 20px auto 0;
         }
         @media screen and (min-width: 1462px){
-            .iconChat, .iconCountrys, .iconNetwork{
+            .icon-chat, .icon-countrys, .icon-network{
                 grid-row: 1 / 2;
             }
-            .iconQA, .logo, .iconReaMoney{
+            .icon-qa, .logo, .icon-rea-money{
                 grid-row: 2 / 3;
             }
-            .iconChat, .iconQA{
+            .icon-chat, .icon-qa{
                 grid-column: 1 / 2;
             }
-            .iconCountrys, .logo{
+            .icon-countrys, .logo{
                 grid-column: 2 / 3;
             }
-            .iconNetwork, .iconReaMoney{
+            .icon-network, .icon-rea-money{
                 grid-column: 3 / 4;
             }
-            .iconQA, .iconReaMoney{
+            .icon-qa, .icon-rea-money{
                 margin-top: 100px;
             }
             .logo {
@@ -68,19 +68,19 @@
         @media screen and (max-width: 1462px){
             
             @media screen and (min-width: 950px), screen and (max-width: 428px){
-                .iconChat, .iconNetwork{
+                .icon-chat, .icon-network{
                     grid-column: 1/2;
                 }
-                .iconChat, .iconCountrys{
+                .icon-chat, .icon-countrys{
                     grid-row: 1/2;
                 }
-                .iconNetwork, .iconQA{
+                .icon-network, .icon-qa{
                     grid-row: 2 / 3;
                 }
-                .iconQA, .iconCountrys{
+                .icon-qa, .icon-countrys{
                     grid-column: 2 / 3;
                 }
-                .iconReaMoney{
+                .icon-rea-money{
                     grid-column: 1 / 3;
                     grid-row: 3 / 4;
                     margin: auto;
@@ -103,27 +103,27 @@
                     .title{
                         margin-top: 40px;
                         font-family: Raleway;
-                        font-size: 25px;
+                        font-size: 20px;
                         text-align: center;
                     }
                     .item{
                         text-align: center;
-                        width: 190px;
+                        width: 180px;
                         height: 163px;
                     }
-                    .noteTitle{
+                    .note-title{
                         margin-top: 5px;
                     }
                     .logo img{
                         max-width: 288px;
-                        max-height: 200px;
+                        max-height: 195px;
                         margin: 0 auto 0;
                     }
                     .items{
                         display: grid;
-                        grid-column-gap: 16px;
-                        grid-template-columns: repeat(2, 190px);
-                        width: 396px;
+                        gap: 10px;
+                        grid-template-columns: repeat(2, 180px);
+                        width: 370px;
                         margin: 40px auto 0;
                     }
                 }
@@ -143,25 +143,25 @@
 </head>
 <body>
     <div class="title">Thế Mạnh Của Chúng Tôi</div>
-    <div class="noteTitle"><img src="image/NoteTitle.png" alt="NoteTitle"></div>
+    <div class="note-title"><img src="image/NoteTitle.png" alt="NoteTitle"></div>
     <div class="items">
-        <div class="item iconChat">
+        <div class="item icon-chat">
             <img src="image/IconChat.png" alt="IconChat">
             <p>Luôn phản hồi kịp thời các thắc mắc của khách hàng</p>
         </div>
-        <div class="item iconCountrys">
+        <div class="item icon-countrys">
             <img src="image/IconCountrys.png" alt="IconCountrys">
             <p>Cung cấp dịch vụ đa dạng cho khách hàng quốc tế</p>
         </div>
-        <div class="item iconNetwork">
+        <div class="item icon-network">
             <img src="image/IconNetwork.png" alt="IconNetwork">
             <p>Mạng lưới hiệu quả và chặt chẽ tại Châu Á</p>
         </div>
-        <div class="item iconQA">
+        <div class="item icon-qa">
             <img src="image/IconQA.png" alt="IconQA">
             <p>Sử dụng đa ngôn ngữ</p>
         </div>
-        <div class="item iconReaMoney">
+        <div class="item icon-rea-money">
             <img src="image/IconReaMoney.png" alt="IConReaMoney">
             <p>Mức phí phù hợp</p>
         </div>
