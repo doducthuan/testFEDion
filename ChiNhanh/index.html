@@ -114,6 +114,11 @@
         #one{
             background-image: url('image/Show.png');
         }
+        #icon-map-id{
+            display: inline;
+            position: absolute;
+            inset: 16.4% 0 0 68.75%;
+        }
         @media  screen and (max-width: 1500px) {
             .map{
                 display: none;
@@ -189,7 +194,7 @@
         </div>
         <div class="map">
             <img src="image/Map.png" alt="map" class="map-vietnam">
-            <img src="image/IconAddr.png" alt="iconAddr" class="icon-map" id="iconMapId">
+            <img src="image/IconAddr.png" alt="iconAddr" class="icon-map" id="icon-map-id">
         </div>    
     </div>
     <script>
@@ -221,7 +226,7 @@
                 }      
             }
             document.getElementById("desp").innerHTML = dictAddress[st];
-            $('#iconMapId').css({
+            $('#icon-map-id').css({
                 'display' : 'inline',
                 'position': 'absolute',
                 'inset' : dictAddr[st]
